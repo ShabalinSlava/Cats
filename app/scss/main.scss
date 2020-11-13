@@ -164,9 +164,139 @@ strong {
 	}
 }
 
+// Sort
+.sort {
+	background: $white;
+
+	&__content {
+		padding: 40px 0px;
+	}
+
+	&__text {
+		font-family: $Montserrat;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 22px;		
+	}
+
+	&__category {
+		display: flex;
+		align-items: center;
+		margin-bottom: 38px;
+	}
+
+	&__select {
+		border: none;
+		outline: none;
+		margin: 0px 20px;
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	&__block {
+		margin-bottom: 30px;
+	}
+
+	&__description {
+		background: #F3F3F3;
+		padding: 30px;
+	}
+
+	&__name {
+		font-family: $Montserrat;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 29px;
+		color: $black;
+		margin-bottom: 22px;
+	}
+
+	&__params {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		margin:0px 0px 20px 20px;
+		
+		&:after {
+			position: absolute;
+			content: "";
+			left: -20px;
+			top: 4;
+			width: 4px;
+			height: 26px;
+			background: #6EBBD3;
+		}
+	}
+
+	&__el {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		font-family: $Montserrat;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 20px;
+		color: $black;
+	}
+
+	&__subtitle {
+		font-family: $Montserrat;
+		font-weight: normal;
+		font-size: 12px;
+		line-height: 15px;
+		color: $black;
+	}
+
+	&__price {
+		font-family: $Montserrat;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 29px;
+		color: $black;
+	}
+
+	&__button {
+		width: 100%;
+		border: none;
+		border-radius:0px 0px 10px 10px ;
+		background: #6EBBD3;
+		padding: 22px 0px;
+		font-family: $Montserrat;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+		color: $white;
+	}
+
+	&__show {
+		display: block;
+		background: $white;
+		border: 1px solid #cacaca;
+		border-radius: 10px;
+		width: 380px;
+		text-align: center;
+		margin: 0px auto;
+		padding: 17px 0px;
+		font-family: $Montserrat;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 17px;
+		color: $black;
+		cursor: pointer;
+	}
+}
+
 // Footer
 .footer {
-	background: #E5E5E5;
+	background: $white;
 
 	&__content {
 		background: #1F2021;
@@ -237,7 +367,7 @@ strong {
 	&__subscribe {
 		display: flex;
 	}
-	
+
 	&__radio {
 		width: 0;
 		height: 0;
