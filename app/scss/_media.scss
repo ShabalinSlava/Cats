@@ -2,46 +2,27 @@
 
 
 /*==========  Desktop First  ==========*/
-
-// ≥1200px
-@include media-breakpoint-down(lg) {
-	
-}
-
-// ≥992px
-@include media-breakpoint-down(md) {
+// 1600px
+@media screen and (max-width:1600px){
 
 }
-
-// ≥768px
-@include media-breakpoint-down(sm) {
-
-}
-
-// ≥576px
-@include media-breakpoint-down(xs) {
+// 1440px
+@media screen and (max-width:1440px){
 
 }
-
-
-/*==========  Mobile First  ==========*/
-
-// ≤576px
-@include media-breakpoint-up(sm) {
+// 1280px
+@media screen and (max-width:1280px){
 
 }
-
-// ≤768px
-@include media-breakpoint-up(md) {
-
-}
-
-// ≤992px
-@include media-breakpoint-up(lg) {
+// 992px
+@media screen and (max-width:992px){
 
 }
+// 768px
+@media screen and (max-width:768px){
 
-// ≤1200px
-@include media-breakpoint-up(xl) {
-	
+}
+// 576px
+@media screen and (max-width:576px){
+
 }

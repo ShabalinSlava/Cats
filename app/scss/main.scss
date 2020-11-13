@@ -3,7 +3,12 @@
 @import "libs";
 
 ::placeholder {
-	color: #666;
+	font-family: $Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+	color: #000;
 }
 
 ::selection {
@@ -19,12 +24,17 @@ body {
 	font-family: $default-font;
 	overflow-x: hidden;
 	color: $text;
-	input, textarea {
+	margin: 0;
+
+	input,
+	textarea {
 		border: #666 1px solid;
 		outline: none;
+
 		&:focus:required:invalid {
 			border-color: red;
 		}
+
 		&:required:valid {
 			border-color: green;
 		}
@@ -35,6 +45,7 @@ body {
 	display: block;
 	max-width: 100%;
 	height: auto;
+
 	&.img-width {
 		width: 100%;
 	}
@@ -44,10 +55,223 @@ body {
 	text-align: center;
 }
 
-b, strong {
+b,
+strong {
 	font-weight: bold;
 }
 
+.container {
+	max-width: 1280px;
+	margin: auto;
+	padding: 0px 20px;
+}
 
+// Header
+.header {
+	position: relative;
+	background-image: url("../img/header/header.png");
+	width: 100%;
+	height: 252px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 
+	&::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background: rgba(31, 32, 33, 0.79);
+		top: 0;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 10;
+		padding: 40px 0px 40px 0px;
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+
+	&__feedback {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		flex-grow: 0.4;
+	}
+
+	&__number {
+		font-family: $Montserrat;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 29px;
+		color: $white;
+
+		&:hover {
+			color: $white;
+		}
+	}
+
+	&__call {
+		font-family: $Montserrat;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 22px;
+		color: $white;
+		text-align: right;
+	}
+
+	&__search {
+		font-family: $Montserrat;
+		font-weight: bold;
+		font-size: 38px;
+		line-height: 46px;
+		color: $white;
+	}
+}
+
+// Navigation
+.nav {
+	flex-grow: 0.3;
+
+	&__block {
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item {
+		list-style-type: none;
+	}
+
+	&__link {
+		font-family: $Montserrat;
+		font-size: 18px;
+		line-height: 22px;
+		color: $white;
+		transition: all 0.5s ease-out;
+
+		&:hover {
+			color: #E5E5E5;
+			transition: all 0.5s ease-out;
+		}
+	}
+}
+
+// Footer
+.footer {
+	background: #E5E5E5;
+
+	&__content {
+		background: #1F2021;
+		display: flex;
+		justify-content: space-between;
+		padding: 50px 80px;
+	}
+
+	&__block {
+		width: 37%;
+	}
+
+	&__title {
+		font-family: $Montserrat;
+		font-weight: bold;
+		font-size: 48px;
+		line-height: 59px;
+		color: $white;
+		margin-bottom: 26px;
+	}
+
+	&__text {
+		font-family: $Montserrat;
+		font-weight: normal;
+		font-size: 28px;
+		line-height: 91%;
+		color: $white;
+	}
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 67%;
+
+	&__wrap {
+		margin-bottom: 24px;
+	}
+
+	&__input {
+		width: 43%;
+		background: #fff;
+		border-radius: 10px;
+		margin-right: 20px;
+		padding: 18px 0px 19px 20px;
+	}
+
+	&__button {
+		width: 37%;
+		background: #6EBBD3;
+		border-radius: 10px;
+		border: none;
+		font-family: $Montserrat;
+		font-weight: bold;
+		font-size: 14px;
+		color: $white;
+		padding: 20px 0px;
+		transition: all 0.5s ease-out;
+		cursor: pointer;
+
+		&:hover {
+			transform: scale(1.02);
+			transition: all 0.5s ease-out;
+		}
+	}
+
+	&__subscribe {
+		display: flex;
+	}
+	
+	&__radio {
+		width: 0;
+		height: 0;
+		left: 99999px;
+		visibility: hidden;
+	}
+
+	&__checkbox {
+		display: block;
+		width: 18px;
+		height: 18px;
+		border: 1.02899px solid #85898f;
+		border-radius: 3px;
+		box-sizing: border-box;
+		margin-right: 10px;
+	}
+
+	&__text {
+		font-family: $Montserrat;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 17px;
+		color: $white;
+	}
+}
+
+.form__radio:checked~.form__checkbox {
+	background-image: url("../img/icon/agree.svg");
+	width: 18px;
+	height: 18px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+@import "reboot";
 @import "media"; // Always at the end
