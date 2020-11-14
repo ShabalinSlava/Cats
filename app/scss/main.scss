@@ -169,7 +169,8 @@ strong {
 	background: $white;
 
 	&__content {
-		padding: 40px 0px;
+		position: relative;
+		padding: 40px 0px 60px 0px;
 	}
 
 	&__text {
@@ -197,8 +198,28 @@ strong {
 		flex-wrap: wrap;
 	}
 
+	&__hidden {
+		display: none;
+		transition: all 1s ease-out;
+	}
+
 	&__block {
+		position: relative;
 		margin-bottom: 30px;
+	}
+
+	&__sale {
+		position: absolute;
+		top: 38px;
+		left: 39px;
+		background: #E52D2D;
+		padding: 10px 19px;
+		border-radius: 10px;
+		font-family: $Montserrat;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 20px;
+		color: $white;
 	}
 
 	&__description {
@@ -274,6 +295,34 @@ strong {
 		line-height: 20px;
 		text-align: center;
 		color: $white;
+		cursor: pointer;
+	}
+
+	&__up {
+		position: absolute;
+		right: 0;
+		bottom: 30px;
+		width: 59px;
+		height: 59px;
+		display: none;
+		background: #6EBBD3;
+		
+		&_show {
+			display: block;
+			cursor: pointer;
+		}
+
+		&:after {
+			position: absolute;
+			content: "";
+			background-image: url("../img/icon/up.png");
+			background-repeat: no-repeat;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 20px;
+			height: 20px;
+		}
 	}
 
 	&__show {
@@ -291,6 +340,12 @@ strong {
 		line-height: 17px;
 		color: $black;
 		cursor: pointer;
+		transition: all .5s ease-out;
+		&:hover {
+			color: $white;
+			background: #6ebbd3;
+			transition: all .5s ease-out;
+		}
 	}
 }
 
@@ -334,6 +389,8 @@ strong {
 	width: 67%;
 
 	&__wrap {
+		display: flex;
+		justify-content: flex-end;
 		margin-bottom: 24px;
 	}
 
@@ -359,13 +416,16 @@ strong {
 		cursor: pointer;
 
 		&:hover {
-			transform: scale(1.02);
+			background: $white;
+			color: $black;
 			transition: all 0.5s ease-out;
 		}
 	}
 
 	&__subscribe {
 		display: flex;
+		justify-content: flex-end;
+		width: 47%;
 	}
 
 	&__radio {
