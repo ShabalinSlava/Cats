@@ -423,26 +423,26 @@ strong {
 	}
 
 	&__subscribe {
+		position: relative;
 		display: flex;
 		justify-content: flex-end;
 		width: 47%;
 	}
 
 	&__radio {
-		width: 0;
 		height: 0;
-		left: 99999px;
-		visibility: hidden;
+    	width: 0;
+    	left: 9999999px;
+    	visibility: hidden;
 	}
 
 	&__checkbox {
 		display: block;
 		width: 18px;
 		height: 18px;
-		border: 1.02899px solid #85898f;
-		border-radius: 3px;
-		box-sizing: border-box;
-		margin-right: 10px;
+		border: 1px solid #e5e5e5;
+    	border-radius: 3.08696px;
+    	margin-right: 10px;
 	}
 
 	&__text {
@@ -455,13 +455,47 @@ strong {
 	}
 }
 
-.form__radio:checked~.form__checkbox {
+.form__radio:checked ~ .form__checkbox {
 	background-image: url("../img/icon/agree.svg");
 	width: 18px;
 	height: 18px;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
+
+// Heart for cats block
+
+[id='toggle-heart'] {
+	position: absolute;
+	right: 39px;
+	top: 39px;
+	width: 30px;
+	height: 30px;
+	z-index: 1;
+	opacity: 0;
+	cursor: pointer;
+  }
+  [id='toggle-heart']:checked + label {
+	color: $white;
+	-webkit-filter: none;
+			filter: none;
+	will-change: font-size;
+  }
+  
+  [for='toggle-heart'] {
+	align-self: center;
+	position: absolute;
+	top: 18px;
+	right: 32px;
+	color: #888;
+	font-size: 3em;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+	cursor: pointer;
+  }
+
 
 @import "reboot";
 @import "media"; // Always at the end

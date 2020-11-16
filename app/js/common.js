@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function(){
 	const cardList = document.querySelector(".sort__container")
+	const email = document.querySelector(".form__input")
+	const formBtn = document.querySelector(".form__button")
+	const emailRegexp = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
 	let sortItem = 0
 	let goTopBtn = document.querySelector(".sort__up")
 
@@ -11,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			target.disabled = true
 		}
 	}
+
 	cardList.addEventListener("click", handleCardListClick)
 
 	// Show more cards
@@ -45,5 +49,22 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	window.addEventListener("scroll", trackScroll)
 	goTopBtn.addEventListener("click", backToTop)
+
+	// Validate email
+	function validateEmail(value) {
+		return emailRegexp.test(value)
+	}
+
+	function updateInput() {
+		if (validateEmail(email.value) || email.value === "") {
+			email.style.borderColor = 'green';
+			formBtn.disabled = false		
+		} else {
+			email.style.borderColor = 'red';
+			formBtn.disabled = true
+		} 	
+	}
+
+	email.addEventListener("input", updateInput)
 });
   
