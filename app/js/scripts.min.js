@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function(){
+	const form = document.querySelector(".form")
 	const cardList = document.querySelector(".sort__container")
 	const email = document.querySelector(".form__input")
 	const formBtn = document.querySelector(".form__button")
 	const emailRegexp = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
 	let sortItem = 0
 	let goTopBtn = document.querySelector(".sort__up")
+
 
 	// Change button and color
 	const handleCardListClick = ({target}) => {
@@ -50,6 +52,10 @@ document.addEventListener('DOMContentLoaded', function(){
 	window.addEventListener("scroll", trackScroll)
 	goTopBtn.addEventListener("click", backToTop)
 
+	form.addEventListener("submit", function(e){
+		e.preventDefault()
+	})
+
 	// Validate email
 	function validateEmail(value) {
 		return emailRegexp.test(value)
@@ -57,9 +63,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	function updateInput() {
 		if (validateEmail(email.value) || email.value === "") {
-			email.style.borderColor = 'green';
+			email.style.border = "2px solid green"
 			formBtn.disabled = false		
 		} else {
+			email.style.border = "2px solid red"
 			email.style.borderColor = 'red';
 			formBtn.disabled = true
 		} 	

@@ -184,7 +184,11 @@ strong {
 		display: flex;
 		align-items: center;
 		margin-bottom: 38px;
-	}
+  }
+  
+  &__container {
+    padding-bottom: 30px;
+  }
 
 	&__select {
 		border: none;
@@ -247,7 +251,7 @@ strong {
 			position: absolute;
 			content: "";
 			left: -20px;
-			top: 4;
+			top: 4px;
 			width: 4px;
 			height: 26px;
 			background: #6EBBD3;
@@ -386,16 +390,15 @@ strong {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 67%;
+	width: 57%;
 
 	&__wrap {
-		display: flex;
-		justify-content: flex-end;
+		display: block;
 		margin-bottom: 24px;
 	}
 
 	&__input {
-		width: 43%;
+		width: 49%;
 		background: #fff;
 		border-radius: 10px;
 		margin-right: 20px;
@@ -403,7 +406,7 @@ strong {
 	}
 
 	&__button {
-		width: 37%;
+		width: 41%;
 		background: #6EBBD3;
 		border-radius: 10px;
 		border: none;
@@ -425,8 +428,8 @@ strong {
 	&__subscribe {
 		position: relative;
 		display: flex;
-		justify-content: flex-end;
-		width: 47%;
+		justify-content: end;
+		width: 100%;
 	}
 
 	&__radio {

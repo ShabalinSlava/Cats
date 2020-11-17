@@ -3,26 +3,145 @@
 
 /*==========  Desktop First  ==========*/
 // 1600px
-@media screen and (max-width:1600px){
+@media screen and (max-width:1600px) {}
 
-}
 // 1440px
-@media screen and (max-width:1440px){
-
+@media screen and (max-width:1440px) {
 }
+
 // 1280px
-@media screen and (max-width:1280px){
+@media screen and (max-width:1280px) {
+  .sort {
 
+    &__content {
+      padding: 40px 0px 40px 0px;
+    }
+
+    &__block {
+      width: 30%;
+    }
+
+    &__img {
+      width: 100%;
+    }
+
+    &__sale {
+      padding: 7px 16px;
+      font-size: 15px;
+    }
+
+    &__description {
+      padding: 20px;
+    }
+
+    &__name {
+      font-size: 22px;
+      margin-bottom: 17px;
+    }
+
+    &__params {
+      flex-direction: column;
+      margin: 0px 0px 10px 20px;
+
+      &:after {
+        top:0px;
+        height: 92%;
+      }
+    }
+
+    &__el {
+      margin-bottom: 10px;
+    }
+
+    &__price {
+      font-size: 22px;
+    }
+
+    &__button {
+      padding: 20px 0px;
+    }
+
+  }
+
+  .footer {
+    
+    &__content {
+      padding: 40px 40px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 50px;
+    }
+
+    &__text {
+      font-size: 26px;
+    }
+  }
+
+  .form {
+
+    &__input {
+      padding: 15px 0px 15px 20px;
+    }
+  }
 }
+ 
 // 992px
-@media screen and (max-width:992px){
+@media screen and (max-width:992px) {
+  .header {
+    &__wrap {
+      margin-bottom: 40px;
+    }
 
+    &__number {
+      font-size: 20px;
+    }
+
+    &__call {
+      font-size: 16px;
+    }
+
+    &__search {
+      font-size: 35px;
+    }
+  }
+
+  .logo {
+    width: 8%;
+  }
+
+  .nav {
+    &__link{
+      font-size: 16px;
+    }
+  }
+
+  .sort {
+    &__block {
+      width: 48%;
+    }
+
+    &__params {
+      flex-direction: inherit;
+    }
+  }
+
+  .footer {
+    &__title {
+      font-size: 35px;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 22px;
+    }
+  }
 }
+
 // 768px
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {}
 
-}
 // 576px
-@media screen and (max-width:576px){
-
-}
+@media screen and (max-width:576px) {}
