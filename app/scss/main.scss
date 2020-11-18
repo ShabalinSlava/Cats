@@ -66,6 +66,7 @@ strong {
 	padding: 0px 20px;
 }
 
+
 // Header
 .header {
 	position: relative;
@@ -135,9 +136,15 @@ strong {
 	}
 }
 
-// Navigation
+
+
+// Navigation for desktop
 .nav {
 	flex-grow: 0.3;
+
+	&__mobile {
+		display: none;
+	}
 
 	&__block {
 		display: flex;
@@ -162,7 +169,35 @@ strong {
 			transition: all 0.5s ease-out;
 		}
 	}
+
+	&__menu {
+		position: relative;
+		width: 30px;
+		height: 19px;
+		z-index: 70;
+		cursor: pointer;
+	}
+
+	&__el {
+		display: block;
+		width: 100%;
+		height: 3px;
+		background: $white;
+		transition: all .3s;
+
+		&:nth-child(2) {
+			position: absolute;
+			transform: translateY(-50%);
+			top: 50%;
+		}
+
+		&:nth-child(3) {
+			position: absolute;
+			bottom: 0px;
+		}
+	}
 }
+
 
 // Sort
 .sort {
@@ -177,18 +212,18 @@ strong {
 		font-family: $Montserrat;
 		font-weight: bold;
 		font-size: 18px;
-		line-height: 22px;		
+		line-height: 22px;
 	}
 
 	&__category {
 		display: flex;
 		align-items: center;
 		margin-bottom: 38px;
-  }
-  
-  &__container {
-    padding-bottom: 30px;
-  }
+	}
+
+	&__container {
+		padding-bottom: 30px;
+	}
 
 	&__select {
 		border: none;
@@ -245,8 +280,8 @@ strong {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		margin:0px 0px 20px 20px;
-		
+		margin: 0px 0px 20px 20px;
+
 		&:after {
 			position: absolute;
 			content: "";
@@ -290,7 +325,7 @@ strong {
 	&__button {
 		width: 100%;
 		border: none;
-		border-radius:0px 0px 10px 10px ;
+		border-radius: 0px 0px 10px 10px;
 		background: #6EBBD3;
 		padding: 22px 0px;
 		font-family: $Montserrat;
@@ -310,7 +345,7 @@ strong {
 		height: 59px;
 		display: none;
 		background: #6EBBD3;
-		
+
 		&_show {
 			display: block;
 			cursor: pointer;
@@ -345,6 +380,7 @@ strong {
 		color: $black;
 		cursor: pointer;
 		transition: all .5s ease-out;
+
 		&:hover {
 			color: $white;
 			background: #6ebbd3;
@@ -402,7 +438,7 @@ strong {
 		background: #fff;
 		border-radius: 10px;
 		margin-right: 20px;
-		padding: 18px 0px 19px 20px;
+		padding: 18px 0px 17px 20px;
 	}
 
 	&__button {
@@ -433,10 +469,8 @@ strong {
 	}
 
 	&__radio {
-		height: 0;
-    	width: 0;
-    	left: 9999999px;
-    	visibility: hidden;
+		position: absolute;
+		opacity: 0;
 	}
 
 	&__checkbox {
@@ -444,8 +478,8 @@ strong {
 		width: 18px;
 		height: 18px;
 		border: 1px solid #e5e5e5;
-    	border-radius: 3.08696px;
-    	margin-right: 10px;
+		border-radius: 3.08696px;
+		margin-right: 10px;
 	}
 
 	&__text {
@@ -458,7 +492,7 @@ strong {
 	}
 }
 
-.form__radio:checked ~ .form__checkbox {
+.form__radio:checked~.form__checkbox {
 	background-image: url("../img/icon/agree.svg");
 	width: 18px;
 	height: 18px;
@@ -477,15 +511,16 @@ strong {
 	z-index: 1;
 	opacity: 0;
 	cursor: pointer;
-  }
-  [id='toggle-heart']:checked + label {
+}
+
+[id='toggle-heart']:checked+label {
 	color: $white;
 	-webkit-filter: none;
-			filter: none;
+	filter: none;
 	will-change: font-size;
-  }
-  
-  [for='toggle-heart'] {
+}
+
+[for='toggle-heart'] {
 	align-self: center;
 	position: absolute;
 	top: 18px;
@@ -493,11 +528,75 @@ strong {
 	color: #888;
 	font-size: 3em;
 	-webkit-user-select: none;
-	   -moz-user-select: none;
-		-ms-user-select: none;
-			user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	cursor: pointer;
-  }
+}
+
+// Menu mobile hidden
+.mobile {
+	position: fixed;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	transition: all .3s;
+	z-index: 50;
+	left: 0;
+	background: #6ebbd3;
+
+	&__block {
+		padding: 20px 20px 10px 20px;
+	}
+}
+
+.mobile--active {
+	max-height: 400px;
+	padding-top: 60px;
+}
+
+// For button mobile
+.nav__mobile--active {
+	position: fixed;
+	top: 7px;
+	right: 7px;
+}
+
+.nav__mobile--active span:nth-child(1) {
+	opacity: 0;
+}
+
+.nav__mobile--active span:nth-child(2) {
+	transform: rotate(45deg) translateY(-30%);
+	width: 70%;
+	top: 50%;
+}
+
+.nav__mobile--active span:nth-child(3) {
+	transform: rotate(-45deg) translateY(-30%);
+	width: 70%;
+	top: 50%;
+}
+
+// Navigation for mobile
+.navigation {
+	display: none;
+	width: 100%;
+	position: fixed;
+	padding: 10px 0px;
+	z-index: 100;
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.fixed {
+	top: 0px;
+	background: #1f2021;
+}
 
 
 @import "reboot";

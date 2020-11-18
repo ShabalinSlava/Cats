@@ -2,558 +2,590 @@
 <html lang="ru">
 
 <head>
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
-	<title>Cats</title>
-	<meta name="description" content="">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="icon" href="img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-	<!-- Template Basic Images End -->
-	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
-	<!-- Custom Browsers Color End -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.min.css">
+  <meta charset="utf-8">
+  <!-- <base href="/"> -->
+  <title>Cats</title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Template Basic Images Start -->
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="icon" href="img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+  <!-- Template Basic Images End -->
+  <!-- Custom Browsers Color Start -->
+  <meta name="theme-color" content="#000">
+  <!-- Custom Browsers Color End -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
-	<header class="header">
-		<div class="container">
-			<div class="header__content">
-				<div class="header__wrap">
-					<img class="logo" src="img/logo/logo.png" alt="">
-					<nav class="nav">
-						<ul class="nav__block">
-							<li class="nav__item"><a class="nav__link" href="#main">Main</a></li>
-							<li class="nav__item"><a class="nav__link" href="#gallery">Gallery</a></li>
-							<li class="nav__item"><a class="nav__link" href="#news">News</a></li>
-							<li class="nav__item"><a class="nav__link" href="#profile">Profile</a></li>
-						</ul>
-					</nav>
-					<div class="header__feedback">
-						<a href="tel:54434900000" class="header__number">+544 3490 0000</a>
-						<p class="header__call">Звони скорее!</p>
-					</div>
-				</div>
-				<p class="header__search">Найдено 349 котов</p>
-			</div>
-		</div>
-	</header>
+  <div class="navigation">
+    <div class="container">
+      <div class="navigation__content">
+        <img class="logo" src="img/logo/logo.png" alt="">
+        <a href="tel:54434900000" class="header__number">+544 3490 0000</a>
+        <!-- humburger for mobile -->
+        <div class="nav__mobile">
+          <div class="nav__wrap">
+            <div class="nav__menu">
+              <span class="nav__el"></span>
+              <span class="nav__el"></span>
+              <span class="nav__el"></span>
+            </div>
+          </div>
+        </div>
+        <!-- menu mobile hidden -->
+        <nav class="mobile">
+          <ul class="mobile__block">
+            <li class="nav__item"><a class="nav__link" href="#main">Main</a></li>
+            <li class="nav__item"><a class="nav__link" href="#gallery">Gallery</a></li>
+            <li class="nav__item"><a class="nav__link" href="#news">News</a></li>
+            <li class="nav__item"><a class="nav__link" href="#profile">Profile</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 
-	<section class="sort">
-		<div class="container">
-			<div class="sort__content">
-				<div class="sort__category">
-					<p class="sort__text">Сортировать по:</p>
-					<select class="sort__select" name="price">
-						<option value="">Цена</option>
-						<option value="10000">10к</option>
-						<option value="20000">20к</option>
-						<option value="30000">30к</option>
-					</select>
-					<select class="sort__select" name="age">
-						<option value="">Возраст</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-					</select>
-				</div>
-				<div class="sort__container">
-					<div class="sort__wrap">
+<!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <div class="header__wrap">
+          <img class="logo" src="img/logo/logo.png" alt="">
+          <!-- Menu for desktop -->
+          <nav class="nav">
+            <ul class="nav__block">
+              <li class="nav__item"><a class="nav__link" href="#main">Main</a></li>
+              <li class="nav__item"><a class="nav__link" href="#gallery">Gallery</a></li>
+              <li class="nav__item"><a class="nav__link" href="#news">News</a></li>
+              <li class="nav__item"><a class="nav__link" href="#profile">Profile</a></li>
+            </ul>
+          </nav>
+          <div class="header__feedback">
+            <a href="tel:54434900000" class="header__number">+544 3490 0000</a>
+            <p class="header__call">Звони скорее!</p>
+          </div>
+        </div>
+        <p class="header__search">Найдено 349 котов</p>
+      </div>
+    </div>
+  </header>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox"  />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<p class="sort__sale">-40%</p>
-							<img class="sort__img" src="img/cats/cat1.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">30 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+  <!-- Block with cats -->
+  <section class="sort">
+    <div class="container">
+      <div class="sort__content">
+        <div class="sort__category">
+          <p class="sort__text">Сортировать по:</p>
+          <select class="sort__select" name="price">
+            <option value="">Цена</option>
+            <option value="10000">10к</option>
+            <option value="20000">20к</option>
+            <option value="30000">30к</option>
+          </select>
+          <select class="sort__select" name="age">
+            <option value="">Возраст</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <div class="sort__container">
+          <div class="sort__wrap">
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat2.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">40 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <p class="sort__sale">-40%</p>
+              <img class="sort__img" src="img/cats/cat1.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">30 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat3.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">20 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat2.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">40 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat1.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">30 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat3.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">20 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat2.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">40 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat1.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">30 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat3.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">20 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
-					</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat2.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">40 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-					<div class="sort__wrap sort__hidden">
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat3.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">20 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
+          </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<p class="sort__sale">-40%</p>
-							<img class="sort__img" src="img/cats/cat1.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">30 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+          <div class="sort__wrap sort__hidden">
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat2.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">40 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <p class="sort__sale">-40%</p>
+              <img class="sort__img" src="img/cats/cat1.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">30 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat3.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">20 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat2.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">40 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat1.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">30 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat3.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">20 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat2.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">40 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat1.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">30 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat3.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">20 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
-					</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat2.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">40 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-					<div class="sort__wrap sort__hidden">
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat3.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">20 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
+          </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<p class="sort__sale">-40%</p>
-							<img class="sort__img" src="img/cats/cat1.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">30 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+          <div class="sort__wrap sort__hidden">
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat2.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">40 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <p class="sort__sale">-40%</p>
+              <img class="sort__img" src="img/cats/cat1.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">30 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat3.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">20 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat2.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">40 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat1.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">30 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat3.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">20 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat2.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">40 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat1.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">30 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-						<div class="sort__block">
-							<input id="toggle-heart" type="checkbox" />
-							<label for="toggle-heart" aria-label="like">❤</label>
-							<img class="sort__img" src="img/cats/cat3.jpg" alt="">
-							<div class="sort__description">
-								<p class="sort__name">Кот полосатый</p>
-								<div class="sort__params">
-									<div class="sort__el">
-										<span class="sort__title">Коричневый</span>
-										<span class="sort__subtitle">Окрас</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">2 мес.</span>
-										<span class="sort__subtitle">Возраст</span>
-									</div>
-									<div class="sort__el">
-										<span class="sort__title">4</span>
-										<span class="sort__subtitle">Кол-во лап</span>
-									</div>
-								</div>
-								<p class="sort__price">20 000 руб.</p>
-							</div>
-							<button class="sort__button">Купить</button>
-						</div>
-					</div>
-				</div>
-				<div class="sort__cart"></div>
-				<button class="sort__show">Показать еще</button>
-				<a class="sort__up"></a>
-			</div>
-	</section>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat2.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">40 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
 
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__content">
-				<div class="footer__block">
-					<h3 class="footer__title">Успей купить!</h3>
-					<p class="footer__text">Подпишись и успей словить все акции</p>
-				</div>
-				<form class="form">
-					<div class="form__wrap">
-						<input class="form__input"  type="text" name="email" placeholder="Email">
-						<button type="submit" class="form__button">Подписаться</button>
-					</div>
-					<label class="form__subscribe" for="">
-						<input class="form__radio" type="checkbox">
-						<span class="form__checkbox"></span>
-						<p class="form__text">Подписаться на новости</p>
-					</label>
-				</form>
-			</div>
-		</div>
-	</footer>
-	<script src="js/scripts.min.js"></script>
+            <div class="sort__block">
+              <input id="toggle-heart" type="checkbox" />
+              <label for="toggle-heart" aria-label="like">❤</label>
+              <img class="sort__img" src="img/cats/cat3.jpg" alt="">
+              <div class="sort__description">
+                <p class="sort__name">Кот полосатый</p>
+                <div class="sort__params">
+                  <div class="sort__el">
+                    <span class="sort__title">Коричневый</span>
+                    <span class="sort__subtitle">Окрас</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">2 мес.</span>
+                    <span class="sort__subtitle">Возраст</span>
+                  </div>
+                  <div class="sort__el">
+                    <span class="sort__title">4</span>
+                    <span class="sort__subtitle">Кол-во лап</span>
+                  </div>
+                </div>
+                <p class="sort__price">20 000 руб.</p>
+              </div>
+              <button class="sort__button">Купить</button>
+            </div>
+          </div>
+        </div>
+        <div class="sort__cart"></div>
+        <button class="sort__show">Показать еще</button>
+        <a class="sort__up"></a>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__block">
+          <h3 class="footer__title">Успей купить!</h3>
+          <p class="footer__text">Подпишись и успей словить все акции</p>
+        </div>
+        <form class="form">
+          <div class="form__wrap">
+            <input class="form__input" type="text" name="email" placeholder="Email">
+            <button type="submit" class="form__button">Подписаться</button>
+          </div>
+          <label class="form__subscribe" for="">
+            <input class="form__radio" type="checkbox">
+            <span class="form__checkbox"></span>
+            <p class="form__text">Подписаться на новости</p>
+          </label>
+        </form>
+      </div>
+    </div>
+  </footer>
+  <script src="js/scripts.min.js"></script>
 
 </body>
 
